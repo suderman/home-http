@@ -5,8 +5,9 @@ $GLOBALS['controllers'] = yaml_parse_file('controllers.yml');
 $GLOBALS['commands'] = yaml_parse_file('commands.yml');
 
 function list_devices(){
+  $host =  $_SERVER["SERVER_NAME"];
   echo "<div class=container>";
-  echo "<h1>suder.mn API:</h1>";
+  echo "<h1>$host:</h1>";
   echo "<dl class=dl-horizontal>";
   foreach($GLOBALS['commands'] as $key => $val) {
     echo "<dt>$key</dt>";
@@ -53,11 +54,11 @@ if (isset($_SERVER["REDIRECT_URL"])) {
   }
 
 } else {
-
+  $host =  $_SERVER["SERVER_NAME"];
 ?>
 <!DOCTYPE html>
 <html><head>
-<title>suder.mn API</title>
+<title><? echo $host; ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
