@@ -1,0 +1,18 @@
+# Update this with actual server info/credentials and keep it safe
+# ----------------------------------------------------------------
+
+# http://wiki.universal-devices.com/index.php?title=ISY_Developers:API:REST_Interface
+# http://{name}:{pass}@{address}/rest/nodes/{node}/cmd/DFON
+# http://{name}:{pass}@{address}/rest/programs/{id}/run
+# http://{name}:{pass}@{address}/rest/networking/resources/{id}
+# http://{name}:{pass}@{address}/rest/networking/wol/{id}
+isy: 'http://admin:admin@10.0.0.3/rest/'
+
+# http://www.globalcache.com/files/docs/API-iTach.pdf
+# sendir,{module}:{connector},{id},{frequency},{repeat},{offset},{command}
+ir:  'http://10.0.0.2:8080/sendir,1:1,1,39000,1,1,'
+irb: 'http://10.0.0.2:8080/sendir,1:3,1,39000,1,1,'
+
+# http://www.llsoft.ca/doc/remotemapper/index.html
+# http://{address}:{port}/{code}
+mp:  'http://10.0.0.8:8082/'
